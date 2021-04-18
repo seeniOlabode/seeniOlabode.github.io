@@ -1,0 +1,129 @@
+/* Graphic Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-container {
+    height: 600px;
+    width: 400px;
+    background-color: #000000;
+    padding: 30px;
+}
+
+.calc-button {
+    padding: 0;
+    border: none;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.special-operator {
+    background-color: #929495;
+}
+
+.active-arithmetic {
+    color: #df7f19 !important;
+    background-color: #ffffff !important;
+}
+
+.arithmetic-operator {
+    background-color: #df7f19;
+    color: white;
+}
+
+.digit {
+    background-color: rgb(38,38,39);
+    color: #ffffff;
+}
+
+.calc-button:active:not(.arithmetic-operator) {
+    filter: invert(100%);
+}
+
+.screen {
+    display: grid;
+    overflow: scroll;
+}
+
+
+.screen-buffer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 22px;
+    font-size: 4em;
+    font-family: 'Poppins', sans-serif;;
+    color: #ffffff;
+    overflow: scroll;
+}
+
+/* Calculator Grid */
+.calculator-container {
+    display: grid;
+    gap: 20px;
+    grid-template: 1.1fr 5fr / 1fr;
+}
+
+.buttons {
+    display: grid;
+    gap: 10px;
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+}
+
+.special-operator-buttons {
+    grid-area: 1 / 1 / 2 / span 3;
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr);
+    gap: 10px;
+}
+
+.arithmetic-operator-buttons {
+    grid-area: 1 / 4 / span 5 / 5;
+    display: grid;
+    grid-template: repeat(5, 1fr) / 1fr;
+    gap: 10px;
+}
+
+.digit-buttons {
+    grid-area: 2 / 1 / span 4 / span 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.calc-button {
+    border-radius: 50%;
+}
+
+.span-2.calc-button {
+    grid-column-end: span 2;
+    border-radius: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 35px;
+}
+
+.screen-buffer.message-display {
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 2em;
+}
+
+
+@media (max-width: 400px) {
+    .calculator-container {
+        height: 525px;
+        width: 350px;
+    }
+}
+
