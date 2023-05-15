@@ -1,0 +1,77 @@
+@import "./assets/css/variables.css";
+
+/* MEDIA QUERIES */
+
+/* END MEDIA QUERIES */
+
+/* CUSTOM RESET */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  margin: 0;
+}
+/* END CUSTOM RESET */
+
+/* TYPOGRAPHY */
+
+.jet-brains {
+  font-family: "JetBrains Mono";
+}
+
+.nippo {
+  font-family: Nippo;
+}
+
+.author {
+  font-family: Author;
+}
+
+/* END TYPOGRAPHY */
+
+/* COLOR */
+
+body {
+  color: var(--near-white);
+  overscroll-behavior: none;
+}
+
+/* END COLOR */
+
+/* ANIMATIONS */
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-200%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(200%);
+  }
+
+  100% {
+    transform: translateY((0));
+  }
+}
+
+.generic-slide-down {
+  animation: slideDown 0.5s ease-out;
+}
+
+.generic-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
